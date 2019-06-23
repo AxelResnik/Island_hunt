@@ -7,4 +7,8 @@ class BookingsController < ApplicationController
 
   def destroy
   end
+
+  def dashboard
+
+  end
 end
