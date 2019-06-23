@@ -1,13 +1,14 @@
 require 'faker'
 
 puts 'Destroying old database...'
-User.destroy_all
-Island.destroy_all
 Booking.destroy_all
+Island.destroy_all
+User.destroy_all
 
 puts "Generating 5 users"
-
+users = []
 5.times do
+
   user = User.new(first_name: Faker::Name.first_name,
                   last_name: Faker::Name.last_name,
                   email: Faker::Internet.free_email,
@@ -15,6 +16,7 @@ puts "Generating 5 users"
                   username: Faker::Name.middle_name,
                   photo: 'url')
   user.save!
+  users << user
 end
 
 puts "Finished generating users"
@@ -22,6 +24,7 @@ puts "Finished generating users"
 puts "Generating 10 islands"
 
 difficulty_level = %w[easy medium hard very/ hard]
+islands = []
 10.times do
   island = Island.new(name: Faker::Artist.name,
                       location: Faker::Address.country,
@@ -30,21 +33,22 @@ difficulty_level = %w[easy medium hard very/ hard]
                       price: Faker::Number.between(1000, 10000),
                       difficulty: difficulty_level.sample,
                       photo: 'url2',
-                      user: User.find(rand(1..5)))
+                      user: users.sample)
   island.save!
+  islands << island
 end
 
 puts "Finished generating islands"
 
-puts "Generating 3 bookings"
+# puts "Generating 3 bookings"
 
-3.times do
-  booking = Booking.new(date: Faker::Date.between(2.days.ago, Date.today),
-                        island: Island.find(rand(1..10)),
-                        user: User.find(rand(1..5)))
-  booking.save!
-end
+# 3.times do
+#   booking = Booking.new(date: Faker::Date.between(2.days.ago, Date.today),
+#                         island: islands.sample,
+#                         user: users.sample))
+#   booking.save!
+# end
 
-puts "Finished generating bookings"
+# puts "Finished generating bookings"
 
 puts "Done seeding!"
