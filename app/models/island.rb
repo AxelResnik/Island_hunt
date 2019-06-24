@@ -11,6 +11,6 @@ class Island < ApplicationRecord
   validates :size, presence: true
   validates :price, presence: true
   validates :difficulty, presence: true, inclusion: { in: DIFFICULTY }
-  # validates :photo, presence: true
+  validates :photo, presence: true
   mount_uploader :photo, PhotoUploader
 end
