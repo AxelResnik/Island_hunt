@@ -38,7 +38,7 @@ islands = []
                       size: Faker::Science.element,
                       price: Faker::Number.between(1000, 10000),
                       difficulty: difficulty_level.sample,
-                      photo: 'url2',
+                      remote_photo_url: 'https://images.unsplash.com/photo-1511710837711-ff54b2f4b29a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
                       user: users.sample)
   island.save!
   islands << island

@@ -1,4 +1,24 @@
-<h1> <%= @island.name %> </h1>
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= @island.photo %> );">
+  <div class="container">
+    <h1> <%= @island.name %></h1>
+    <br>
+    <h5 class="text-white">Change the way you've allways been on vacation</h5>
+    <br>
+    <a class="btn btn-dark" href="#">Book now</a>
+  </div>
+</div>
+
+
+
+<div>
+  <h1> <%= @island.name %> </h1>
+  <h3> <%= @island.location %> </h3>
+  <h3> <%= @island.difficulty %> </h3>
+</div>
+
+
+
+<img src=' <%= @island.photo %> '  alt="">
 
 <br>
 <%= link_to "Edit", edit_island_path(@island) %>
