@@ -1,2 +1,12 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>New Booking</h1>
+
+<%= simple_form_for([@island, @booking]) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.date :date %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
