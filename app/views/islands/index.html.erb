@@ -7,5 +7,7 @@
     </li>
   </ul>
 <% end %>
-
-<%= link_to "Add island", new_island_path %>
+<br>
+<% if user_signed_in? %>
+  <%= link_to "Add island", new_island_path %>
+<% end %>
