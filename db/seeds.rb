@@ -6,6 +6,12 @@ Island.destroy_all
 User.destroy_all
 
 puts "Generating 5 users"
+User.create(first_name: "test",
+            last_name: "1234",
+            email: "test@123.com",
+            username: "testingMan",
+            photo: "url",
+            password: "123456")
 users = []
 5.times do
 

@@ -1,2 +1,8 @@
-<h1>Islands#show</h1>
-<p>Find me in app/views/islands/show.html.erb</p>
+<h1> <%= @island.name %> </h1>
+
+<br>
+<%= link_to "Edit", edit_island_path(@island) %>
+<br>
+<%= link_to "Delete", island_path(@island), method: :delete %>
+<br>
+<%= link_to "Back", islands_path %>

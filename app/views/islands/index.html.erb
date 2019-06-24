@@ -1,2 +1,11 @@
-<h1>Islands#index</h1>
-<p>Find me in app/views/islands/index.html.erb</p>
+<h1>All islands</h1>
+
+<% @islands.each do |island| %>
+  <ul>
+    <li>
+      <%= link_to island.name, island_path(island) %>
+    </li>
+  </ul>
+<% end %>
+
+<%= link_to "Add island", new_island_path %>
