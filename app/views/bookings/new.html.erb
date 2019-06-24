@@ -3,7 +3,8 @@
 <%= simple_form_for([@island, @booking]) do |f| %>
 
   <div class="form-inputs">
-    <%= f.date :date %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
   </div>
 
   <div class="form-actions">
