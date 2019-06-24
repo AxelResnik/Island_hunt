@@ -1,13 +1,11 @@
-<h1>New Booking</h1>
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>New Booking</h2>
 
-<%= simple_form_for([@island, @booking]) do |f| %>
-
-  <div class="form-inputs">
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <%= simple_form_for([@island, @booking]) do |f| %>
+      <%= f.input :start_date, as: :string, input_html: {class: "datepicker", id:"start_date"} %>
+      <%= f.input :end_date, as: :string, input_html: {class: "datepicker", id: "end_date"} %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

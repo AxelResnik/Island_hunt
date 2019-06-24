@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :bookings, only: :destroy do
+  resources :bookings, only: [:destroy, :index] do
     collection do
       get 'dashboard'
     end

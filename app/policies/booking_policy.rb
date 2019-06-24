@@ -3,14 +3,18 @@ class BookingPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def create?
-      user == current_user || user.admin
-    end
+  def index?
+    user == record.user
+  end
 
-    def destroy?
-      user == record.user
-    end
+  def create?
+    true
+  end
+
+  def destroy?
+    user == record.user
   end
 
   def new?

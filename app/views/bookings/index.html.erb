@@ -1,0 +1,10 @@
+<% @bookings.each do |booking|%>
+<p>
+<%= 'You have a reservation for' %>
+<%= booking.island.name %>
+<%= 'from' %>
+<%= booking.start_date %>
+<%= 'until' %>
+<%= booking.end_date %>
+</p>
+<% end %>
