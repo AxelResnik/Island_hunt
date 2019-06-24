@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :find_island, only: [:new, :create]
   # before_action :authorize_booking
   def index
-    @bookings = policy_scope(Booking)
+    @bookings = policy_scope(Booking).where(user: current_user)
   end
 
   def new
@@ -23,6 +23,10 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    redirect_to bookings_path, notice: "Booking for #{@booking.island} was successfully destroyed."
+    @booking.destroy
   end
 
   private

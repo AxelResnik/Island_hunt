@@ -1,10 +1,19 @@
+<h2>Hello <%= current_user.username %>, here are your bookings </h2>
+
+<% if !@bookings.empty? %>
 <% @bookings.each do |booking|%>
 <p>
-<%= 'You have a reservation for' %>
-<%= booking.island.name %>
-<%= 'from' %>
-<%= booking.start_date %>
-<%= 'until' %>
-<%= booking.end_date %>
+  <%= 'You have a reservation for' %>
+  <%= booking.island.name %>
+  <%= 'from' %>
+  <% start_date = booking.start_date %>
+  <%= start_date.strftime('%d/%m/%y') %>
+  <%= 'until' %>
+  <% end_date = booking.end_date %>
+  <%= end_date.strftime('%d/%m/%y') %>
 </p>
+<%= link_to "Delete", booking_path(booking), method: :delete %>
+<% end %>
+<% else %>
+<p>No bookings yet</p>
 <% end %>
