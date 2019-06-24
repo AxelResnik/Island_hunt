@@ -1,0 +1,42 @@
+.footer {
+  background: #F9F9F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-futbol {
+  color: black;
+}
+
+.footer .fa-ship {
+  color: #2d72e2;
+}
+
+.footer .fa-beer {
+  color: #f1a507;
+}
+
+.footer .fa-skull-crossbones {
+  color: grey;
+}
+
+ul {
+ list-style-type: none;
+}

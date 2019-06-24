@@ -1,7 +1,60 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+puts 'Destroying old database...'
+Booking.destroy_all
+Island.destroy_all
+User.destroy_all
+
+puts "Generating 5 users"
+User.create(first_name: "test",
+            last_name: "1234",
+            email: "test@123.com",
+            username: "testingMan",
+            photo: "url",
+            password: "123456")
+users = []
+5.times do
+
+  user = User.new(first_name: Faker::Name.first_name,
+                  last_name: Faker::Name.last_name,
+                  email: Faker::Internet.free_email,
+                  password: '123456',
+                  username: Faker::Name.middle_name,
+                  photo: 'url')
+  user.save!
+  users << user
+end
+
+puts "Finished generating users"
+
+puts "Generating 10 islands"
+
+difficulty_level = %w[easy medium hard very/ hard]
+islands = []
+10.times do
+  island = Island.new(name: Faker::Artist.name,
+                      location: Faker::Address.country,
+                      activities: Faker::Color,
+                      size: Faker::Science.element,
+                      price: Faker::Number.between(1000, 10000),
+                      difficulty: difficulty_level.sample,
+                      photo: 'url2',
+                      user: users.sample)
+  island.save!
+  islands << island
+end
+
+puts "Finished generating islands"
+
+# puts "Generating 3 bookings"
+
+# 3.times do
+#   booking = Booking.new(date: Faker::Date.between(2.days.ago, Date.today),
+#                         island: islands.sample,
+#                         user: users.sample))
+#   booking.save!
+# end
+
+# puts "Finished generating bookings"
+
+puts "Done seeding!"

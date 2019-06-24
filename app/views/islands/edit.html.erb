@@ -1,2 +1,5 @@
-<h1>Islands#edit</h1>
-<p>Find me in app/views/islands/edit.html.erb</p>
+<h1>Editing Island</h1>
+
+<%= render 'form', island: @island %>
+
+<%= link_to 'Back', island_path(@island) %>
