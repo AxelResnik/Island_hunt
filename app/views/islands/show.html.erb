@@ -1,6 +1,37 @@
-<h1> <%= @island.name %> </h1>
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= @island.photo %> );">
+  <div class="container">
+    <h1> <%= @island.name %></h1>
+    <br>
+    <h5 class="text-white">Change the way you've allways been on vacation</h5>
+    <br>
+    <a class="btn btn-dark" href="#">Book now</a>
+  </div>
+</div>
 
-<br>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="d-flex">
+      <div style="margin-right: 15px;">
+        <h1> <%= @island.name %> </h1>
+        <h5> <%= @island.location %> | <%= @island.difficulty %> </h5>
+        <br>
+        <h6><strong>Description:</strong></h6>
+        <%= @island.activities %>
+      </div>
+
+      <div id="booking-card" class="col-12 col-sm-12 col-md-4 col-lg-3">
+        <h6> <strong>Price:</strong> <%= @island.price %> $/night</h6>
+        <h6> <strong>Size:</strong> <%= @island.size %> km²</h6>
+        <%= link_to "Book this island", islands_path, class:"btn btn-primary btn-lg btn-block", id:"btn-booking-card" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <% if policy(@island).edit? %>
   <%= link_to "Edit", edit_island_path(@island) %>
 <% end %>
