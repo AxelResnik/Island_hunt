@@ -1,9 +1,9 @@
 class Island < ApplicationRecord
-  DIFFICULTY = %w[easy medium hard very/ hard]
+  DIFFICULTY = %w[Easy Medium Hard]
 
   belongs_to :user
   has_many :reviews
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :name, presence: true
   validates :location, presence: true
