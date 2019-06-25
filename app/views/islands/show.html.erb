@@ -4,16 +4,15 @@
 
 <div class="container mt-3">
   <h1 style="text-align: center;"> <%= @island.name %> </h1>
-  <div class="row">
     <div class="d-flex justify-content-between">
-      <div style="margin-right: 15px;">
+      <div>
         <h5> <%= @island.location %> | <%= @island.difficulty %> </h5>
         <br>
         <h6><strong>Description:</strong></h6>
         <%= @island.activities %>
       </div>
 
-      <div id="booking-card" class="col-12 col-sm-12 col-md-4 col-lg-3">
+      <div id="booking-card">
         <div class="d-flex justify-content-between">
           <h6> <strong>Price:</strong><h6>
           <h6><%= @island.price %> $/night</h6>
@@ -26,7 +25,6 @@
         <%#= link_to "Book this island", islands_path, class:"btn btn-primary btn-lg btn-block", id:"btn-booking-card" %>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="container d-flex">
