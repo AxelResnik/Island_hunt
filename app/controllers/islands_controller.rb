@@ -7,6 +7,12 @@ class IslandsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
+
+    @markers = [{
+      lat: @island.latitude,
+      lng: @island.longitude
+    }]
   end
 
   def new
