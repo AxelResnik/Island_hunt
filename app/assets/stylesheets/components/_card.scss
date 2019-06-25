@@ -14,12 +14,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: #2F4E9B;
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: #2F4E9B;
 }
 
 
@@ -42,5 +44,8 @@
   &:hover {
     text-decoration: none;
     opacity: 0.7;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
