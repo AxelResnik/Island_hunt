@@ -29,7 +29,7 @@ puts "Finished generating users"
 
 puts "Generating 10 islands"
 
-difficulty_level = %w[easy medium hard very/ hard]
+difficulty_level = %w[Easy Medium Hard]
 islands = []
 10.times do
   island = Island.new(name: Faker::Artist.name,
