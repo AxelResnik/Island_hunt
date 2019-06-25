@@ -2,19 +2,17 @@
 </div>
 
 
-
 <div class="container mt-3">
   <h1 style="text-align: center;"> <%= @island.name %> </h1>
-  <div class="row">
-    <div class="d-flex">
-      <div style="margin-right: 15px;">
+    <div class="d-flex justify-content-between">
+      <div>
         <h5> <%= @island.location %> | <%= @island.difficulty %> </h5>
         <br>
         <h6><strong>Description:</strong></h6>
         <%= @island.activities %>
       </div>
 
-      <div id="booking-card" class="col-12 col-sm-12 col-md-4 col-lg-3">
+      <div id="booking-card">
         <div class="d-flex justify-content-between">
           <h6> <strong>Price:</strong><h6>
           <h6><%= @island.price %> $/night</h6>
@@ -27,7 +25,17 @@
         <%#= link_to "Book this island", islands_path, class:"btn btn-primary btn-lg btn-block", id:"btn-booking-card" %>
       </div>
     </div>
-  </div>
+</div>
+
+<div class="container d-flex">
+  <%= link_to islands_path, class: "btn btn-outline-secondary mr-2" do %>
+    Back
+  <% end %>
+<% if policy(@island).edit? %>
+  <%= link_to edit_island_path(@island), class: "btn btn-outline-success" do %>
+    Edit
+  <% end %>
+<% end %>
 </div>
 
 <div
@@ -37,15 +45,3 @@
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
-
-
-
-<%= link_to "Back to islands", islands_path %>
-<% if policy(@island).edit? %>
-  <%= link_to "Edit", edit_island_path(@island) %>
-<% end %>
-<br>
-<% if policy(@island).destroy? %>
-  <%= link_to "Delete", island_path(@island), method: :delete %>
-<% end %>
-<br>

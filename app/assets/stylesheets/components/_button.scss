@@ -1,38 +1,4 @@
-.btn-add {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 40px;
-  background-color: #2F4E9B;
-  color: #EDC9AF;
-  opacity: 1;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  &:hover {
-    text-decoration: none;
-    color: #EDC9AF;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    font-weight: 700;
-  }
-}
-
-.btn-back {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #2F4E9B;
-  color: #EDC9AF;
-  height: 40px;
-  width: 70px;
-  &:hover {
-    text-decoration: none;
-    color: #EDC9AF;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    font-weight: 700;
-  }
+.btn-text {
+  font-weight: 700;
+  font-size: 25px;
 }
