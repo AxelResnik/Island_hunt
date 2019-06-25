@@ -15,6 +15,7 @@
 
 
 .main{
-  min-height: 84vh;
-  width: 100vw;
+  // min-height: 84vh;
+  // width: 100vw;
+  min-height: calc(100vh - 120px - 70px);
 }
