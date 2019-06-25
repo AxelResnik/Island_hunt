@@ -1,5 +1,10 @@
-<h1>Add an island</h1>
+<div class="container my-3">
+  <%= link_to islands_path, class: "btn btn-primary" do %>
+    Back
+  <% end %>
+</div>
+
+<h1 class="text-center">Share your adventure</h1>
 
 <%= render 'form' %>
 
-<%= link_to "Back", islands_path %>
