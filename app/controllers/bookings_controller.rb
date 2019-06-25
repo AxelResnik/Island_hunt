@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     authorize @booking
-    redirect_to bookings_path, notice: "Booking for #{@booking.island} was successfully destroyed."
+    redirect_to bookings_path, notice: "Booking for #{@booking.island.name} was successfully destroyed."
     @booking.destroy
   end
 
