@@ -34,11 +34,13 @@ islands = []
 10.times do
   island = Island.new(name: Faker::Artist.name,
                       location: Faker::Address.country,
-                      activities: Faker::Color,
+                      activities: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, quisquam deleniti quos quo maxime, praesentium excepturi totam sapiente asperiores facere deserunt ipsam sunt eligendi amet, sequi, earum harum a delectus.
+                                   Laborum omnis obcaecati eligendi dolore odio cupiditate minus eaque, ipsam voluptatibus iusto error eveniet, expedita soluta, tempora officia ullam vel, autem illum? Reiciendis autem tempora animi perspiciatis quaerat omnis odit!
+                                   Ad, dolore totam mollitia. Cupiditate unde, optio ducimus illum. Numquam ipsum nemo obcaecati repellat doloremque quod, nobis eum qui! Commodi porro ut, minima amet delectus voluptates saepe nobis dolor repudiandae!",
                       size: Faker::Science.element,
                       price: Faker::Number.between(1000, 10000),
                       difficulty: difficulty_level.sample,
-                      photo: 'url2',
+                      remote_photo_url: 'https://images.unsplash.com/photo-1511710837711-ff54b2f4b29a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
                       user: users.sample)
   island.save!
   islands << island

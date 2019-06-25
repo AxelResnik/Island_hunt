@@ -5,6 +5,10 @@ class IslandPolicy < ApplicationPolicy
     end
   end
 
+  def dashboard?
+    true
+  end
+
   def show?
     true
   end
@@ -20,6 +24,6 @@ class IslandPolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == user || user.admin
+    record.user == user
   end
 end
