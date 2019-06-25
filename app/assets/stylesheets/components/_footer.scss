@@ -7,11 +7,15 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   border-top: 2px solid #f5f5f5;
-    width: 100vw;
+  flex-shrink: 0;
+  width: 100vw;
 }
 .footer-links {
-  display: flex;
+  // display: flex;
   align-items: center;
+  p {
+   margin-bottom: 0;
+  }
 }
 .footer-links a {
   color: black;
