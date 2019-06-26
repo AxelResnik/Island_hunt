@@ -2,17 +2,17 @@
 </div>
 
 
-<div class="container mt-3">
+<div class="container mt-3 ">
   <h1 style="text-align: center;"> <%= @island.name %> </h1>
-    <div class="d-flex justify-content-between">
-      <div class="col-sm-12 col-lg-8">
+    <div class="row justify-content-between">
+      <div class="col-sm-12 col-md-7 col-lg-8 mb-3">
         <h5> <%= @island.location %> | <%= @island.difficulty %> </h5>
         <br>
         <h6><strong>Description:</strong></h6>
         <%= @island.activities %>
       </div>
 
-      <div id="booking-card" class="col-sm-12 col-lg-4">
+      <div id="booking-card" class="col-sm-12 col-md-5 col-lg-4">
         <div class="d-flex justify-content-between">
           <h6> <strong>Price:</strong><h6>
           <h6><%= @island.price %> $/night</h6>
