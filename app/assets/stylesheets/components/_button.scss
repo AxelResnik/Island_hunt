@@ -1,10 +1,19 @@
 .btn-gold {
   font-weight: 700;
   font-size: 20px;
-  color: #DAA520;
+  height: 25px;
+  width: 40px;
+  color: $gold;
   border-style: solid;
-  border-color: white;
-  padding: 5px;
+  border-color: $gold;
+  padding: 8px;
   background-color: black;
-  border-width: 1px;
+  border-width: 0.5px;
+  border-radius: 2px;
+  &:hover {
+    text-decoration: none;
+    background-color: $gold;
+    color: black;
+    border-color: black;
+  }
 }
