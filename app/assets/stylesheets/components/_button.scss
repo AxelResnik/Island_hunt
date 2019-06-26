@@ -1,28 +1,40 @@
 .btn-gold {
   font-weight: 700;
-  font-size: 20px;
-  height: 25px;
-  width: 40px;
+  font-size: 25px;
   color: $gold;
   border-style: solid;
   border-color: $gold;
-  padding: 8px;
+  padding: 10px;
   background-color: black;
   border-width: 0.5px;
-  border-radius: 2px;
+  border-radius: 3px;
+  vertical-align: middle;
   &:hover {
     text-decoration: none;
     background-color: $gold;
     color: black;
     border-color: black;
-    cursor: url("https://cdn0.iconfinder.com/data/icons/universal-signs-symbols/128/death2-512.png"), auto;
   }
 }
 
 .btn-login {
-  height: 25px;
-  width: 40px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-weight: 700;
+  font-size: 25px;
   color: $gold;
   border-style: solid;
   border-color: $gold;
+  padding: 10px;
+  background-color: black;
+  border-width: 0.5px;
+  border-radius: 3px;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+    background-color: $gold;
+    color: black;
+    border-color: black;
+  }
 }
