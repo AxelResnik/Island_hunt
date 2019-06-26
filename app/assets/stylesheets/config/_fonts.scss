@@ -5,6 +5,21 @@
 $body-font: "Open Sans", "Helvetica", "sans-serif";
 $headers-font: "Raleway", "Helvetica", "sans-serif";
 
+
+@font-face {
+   font-family: 'Pirates';
+   src: url('../assets/fonts/PiratesBay.ttf')
+}
+
+@font-face {
+   font-family: 'bootershad';
+   src: url('../assets/fonts/FreebooterShadow.ttf')
+}
+
+@font-face {
+   font-family: 'booter';
+   src: url('../assets/fonts/FreebooterUpdated.ttf')
+}
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
