@@ -7,5 +7,5 @@ class Transport < ApplicationRecord
   validates :price, presence: true
   validates :photo, presence: true
   mount_uploader :photo, PhotoUploader
-  validates :caregory, presence: true, inclusion: { in: CATEGOTY }
+  validates :category, presence: true, inclusion: { in: CATEGOTY }
 end

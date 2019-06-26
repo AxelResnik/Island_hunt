@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'transports/index'
+  get 'transports/show'
   devise_for :users
   root to: 'pages#home'
   resources :islands do
