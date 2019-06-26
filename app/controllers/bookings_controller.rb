@@ -5,6 +5,11 @@ class BookingsController < ApplicationController
     @bookings = policy_scope(Booking).where(user: current_user)
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end
+
   def new
     @booking = Booking.new
     authorize @booking

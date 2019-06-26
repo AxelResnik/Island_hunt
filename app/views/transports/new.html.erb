@@ -14,7 +14,7 @@
             <div class="card-body">
               <h5 class="card-title"><%= transport.name %></h5>
               <p class="card-text"> <%= transport.description %> <br> $ <%= transport.price %></p>
-              <a href="#" class="btn btn-primary btn-block">Select</a>
+              <%= link_to "Select", island_transports_path(@island, @booking, t_id: transport.id),method: :post, class:"btn btn-primary btn-block"  %>
             </div>
           </div>
           <% end %>

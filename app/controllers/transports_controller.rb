@@ -1,5 +1,6 @@
 class TransportsController < ApplicationController
-  before_action :island_booking, only: [:new, :create]
+  before_action :set_booking, only: [:new, :create]
+  before_action :set_island, only: [:new, :create]
 
   def index
     @transports = policy_scope(Transport)
@@ -12,9 +13,9 @@ class TransportsController < ApplicationController
   end
 
   def create
-    raise
-    @transport = Transport.new(transport_params)
-    @transport.save
+    @booking.transport = Transport.find(params[:t_id])
+    @booking.save
+    redirect_to @booking
   end
 
   def show
@@ -22,14 +23,13 @@ class TransportsController < ApplicationController
 
   private
 
-  def transport_params
-    params.require(:island).permit(:name, :description, :category, :price, :photo)
+  def set_booking
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
-  def island_booking
+  def set_island
     @island = Island.find(params[:island_id])
-    @booking = Booking.find(params[:id])
     authorize @island
-    authorize @booking
   end
 end
