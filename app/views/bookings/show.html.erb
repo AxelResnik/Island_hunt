@@ -21,7 +21,7 @@
       <h5><strong>Name: </strong><%= @booking.transport.name %></h5>
       <h5><strong>Description: </strong><%= @booking.transport.description %></h5>
       <h5><strong>Price of transport: </strong>$<%= @booking.transport.price %></h5>
-      <img src="<%= @booking.transport.photo %> " alt="<%= @booking.transport.name %> ">
+      <img src="<%= @booking.transport.photo %> " alt="<%= @booking.transport.name %>" class="img-fluid">
       <br>
       <h5>Total:</h5>
       <h5> $ <%= number_of_nights * @booking.island.price + @booking.transport.price %> </h5>
