@@ -1,10 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1545153996-16c1df09d5ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80); margin-top: -15px;">
-  <div class="container">
-    <h1 style="margin-bottom: 10px;"> Yo ho ho hearties </h1>
-    <h1 style="margin-bottom: 15px;"> Are ye ready for an adventure of a lifetime? </h1>
-    <%= link_to "Show me booty", islands_path, class:"btn-gold" %>
+<div class="home-page">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1545153996-16c1df09d5ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80); margin-top: -15px;">
+    <% if !user_signed_in? %>
+      <%= link_to new_user_session_path, class: "btn-login" do %>
+        Login
+      <% end %>
+    <% else %>
+      <%= link_to destroy_user_session_path, method: :delete, class: "btn-login" do %>
+        Sign out
+      <% end %>
+    <% end %>
+    <div class="container">
+      <h1> Island Hunt </h1>
+      <h3> <span id="banner-typed-text"></span> </h3>
+      <i class="fas fa-angle-right arrow"></i>
+      <%= link_to islands_path, class: "btn-gold" do %>
+        Show m'gold
+      <% end %>
+    </div>
   </div>
-</div>
 
 
   <section><h5 style="text-align: center; padding-top: 30px; padding-bottom: 30px;"> All hands hoay </h5></section>
@@ -16,5 +29,4 @@
   </div>
 
   <section><h5 style="text-align: center; padding-top: 30px; padding-bottom: 30px;"> "Not all treasure is silver and gold, mate" --- Jack Sparrow</h5></section>
-  <div class="img-holder" data-image="https://images.unsplash.com/photo-1483428400520-675ef69a3bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80">
-  </div>
+</div>
