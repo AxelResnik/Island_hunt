@@ -13,8 +13,12 @@ class TransportsController < ApplicationController
   end
 
   def create
-    @booking.transport = Transport.find(params[:t_id])
-    @booking.save
+    if params[:t_id].nil?
+      @booking.save
+    else
+      @booking.transport = Transport.find(params[:t_id])
+      @booking.save
+    end
     redirect_to @booking
   end
 
