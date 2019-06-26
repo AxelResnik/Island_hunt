@@ -4,4 +4,4 @@ const imagescroll = () => {
   $('.img-holder').imageScroll();
 };
 
-export {imagescroll}
+export { imagescroll }
