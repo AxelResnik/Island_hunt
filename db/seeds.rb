@@ -11,7 +11,7 @@ puts "Generating admin user"
 cook = User.new(first_name: "Captain",
             last_name: "Cook",
             email: "ccook@islandhunt.com",
-            username: "blimey!",
+            username: "blimey",
             remote_photo_url: "https://cdn.pixabay.com/photo/2016/03/22/16/09/sailboat-1273168_960_720.jpg",
             password: "123456",
             admin: true)
