@@ -1,6 +1,8 @@
 .card-trip {
   overflow: hidden;
   background: white;
+  width: 100%;
+  height: 100%;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -41,6 +43,8 @@
 }
 
 .island-link {
+  width: 100%;
+  height: 100%;
   &:hover {
     text-decoration: none;
     opacity: 0.7;
