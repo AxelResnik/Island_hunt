@@ -27,14 +27,13 @@
   border-style: solid;
   border-color: $gold;
   padding: 10px;
-  background-color: black;
   border-width: 0.5px;
   border-radius: 3px;
   text-align: center;
   &:hover {
     text-decoration: none;
-    background-color: $gold;
-    color: black;
-    border-color: black;
+    background-color: black;
+    color: $gold;
+    border-color: $gold;
   }
 }
