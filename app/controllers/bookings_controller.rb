@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.island = @island
     authorize @booking
     if @booking.save!
-      redirect_to bookings_path
+      redirect_to new_island_transport_path(@island, @booking)
     else
       render :new
     end

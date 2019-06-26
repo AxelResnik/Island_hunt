@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :islands do
     resources :bookings, only: [:new, :create] do
       member do
-        resources :transports, only: [:index, :show]
+        resources :transports, only: [:index, :show, :new, :create]
       end
     end
   end

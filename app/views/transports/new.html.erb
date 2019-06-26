@@ -1,0 +1,10 @@
+<h3>Congratulations, your booking for <strong><%= @island.name %></strong> has been confirmed! </h3>
+
+<h5>Would you like to add a transport for the island?</h5>
+
+<% @transports.each do |transport| %>
+<div>
+<%= transport.name %>
+<img src="<%= transport.photo %>" alt="">
+</div>
+<% end %>

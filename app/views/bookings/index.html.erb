@@ -23,7 +23,7 @@
                 </div>
               </div>
               <div class="mb-3">
-                <%= link_to "Cancel this trip", booking_path(booking), method: :delete %>
+                <%= link_to "Cancel this trip", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: 'text-dark' %>
               </div>
           </div>
         </div>
