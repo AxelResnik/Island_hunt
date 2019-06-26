@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_25_082136) do
+ActiveRecord::Schema.define(version: 2019_06_26_074501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,9 @@ ActiveRecord::Schema.define(version: 2019_06_25_082136) do
     t.datetime "updated_at", null: false
     t.datetime "start_date"
     t.datetime "end_date"
+    t.bigint "transport_id"
     t.index ["island_id"], name: "index_bookings_on_island_id"
+    t.index ["transport_id"], name: "index_bookings_on_transport_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -51,6 +53,16 @@ ActiveRecord::Schema.define(version: 2019_06_25_082136) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transports", force: :cascade do |t|
+    t.string "category"
+    t.string "description"
+    t.integer "price"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -69,6 +81,7 @@ ActiveRecord::Schema.define(version: 2019_06_25_082136) do
   end
 
   add_foreign_key "bookings", "islands"
+  add_foreign_key "bookings", "transports"
   add_foreign_key "bookings", "users"
   add_foreign_key "islands", "reviews"
   add_foreign_key "islands", "users"
