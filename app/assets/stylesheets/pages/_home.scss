@@ -9,15 +9,19 @@
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: $gold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 55px;
   font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
+.banner h3 {
+  font-size: 35px;
+  color: $gold;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-weight: bold;
+  margin-bottom: 15px;
 }
