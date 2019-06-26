@@ -11,7 +11,9 @@ class IslandsController < ApplicationController
 
     @markers = [{
       lat: @island.latitude,
-      lng: @island.longitude
+      lng: @island.longitude,
+      image_url: helpers.asset_url('skull3.png')
+
     }]
   end
 
