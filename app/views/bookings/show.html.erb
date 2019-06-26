@@ -3,14 +3,35 @@
     <div class="col-sm-12 col-md-10 offset-md-1">
       <h1 class="text-center">Here is you booking for <%= @booking.island.name %> </h1>
 
-      <div class="card mb-3" style="width: 100%">
-        <img src="<%= @booking.island.photo %>" class="card-img-top img-fluid" alt="<%= @booking.island.name %>">
-        <div class="card-body">
-          <h5 class="card-title"> <strong>Island:</strong> <%= @booking.island.name %> </h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
+      <h5><strong>Location: </strong><%= @booking.island.location %></h5>
+      <h5><strong>Activities: </strong><%= @booking.island.activities %></h5>
+      <h5><strong>Difficulty: </strong><%= @booking.island.difficulty %></h5>
+      <% x = @booking.end_date - @booking.start_date %>
+      <% y = x / 24 %>
+      <% z = y / 60 %>
+      <% number_of_nights = z.to_i / 60 %>
+      <h5><strong>Nights: </strong><%= number_of_nights %></h5>
+      <h5><strong>Sub Total: </strong>$<%= number_of_nights * @booking.island.price %></h5>
+
+      <img src="<%= @booking.island.photo %>" class="img-fluid" alt="<%= @booking.island.name %>">
+      <br>
+      <% if !@booking.transport.nil? %>
+      <br>
+      <h5><strong>Way of trasportation: </strong><%= @booking.transport.category %></h5>
+      <h5><strong>Name: </strong><%= @booking.transport.name %></h5>
+      <h5><strong>Description: </strong><%= @booking.transport.description %></h5>
+      <h5><strong>Price of transport: </strong>$<%= @booking.transport.price %></h5>
+      <img src="<%= @booking.transport.photo %> " alt="<%= @booking.transport.name %> ">
+      <br>
+      <h5>Total:</h5>
+      <h5> $ <%= number_of_nights * @booking.island.price + @booking.transport.price %> </h5>
+      <% else %>
+      <br>
+      <h5><strong>Total: </strong>$<%= number_of_nights * @booking.island.price %></h5>
+      <% end %>
+
+      <br>
+      <%= link_to "My Dashboard", bookings_path, class: "btn btn-secondary" %>
     </div>
   </div>
 </div>
