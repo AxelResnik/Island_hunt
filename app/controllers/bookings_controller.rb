@@ -27,6 +27,14 @@ class BookingsController < ApplicationController
     end
   end
 
+  # def update
+  #   if @booking.update(bookings_params)
+  #     redirect_to booking_path(@booking), notice: "#{@booking.name} was successfully updated."
+  #   else
+  #     render :edit
+  #   end
+  # end
+
   def destroy
     @booking = Booking.find(params[:id])
     authorize @booking
