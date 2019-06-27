@@ -6,25 +6,23 @@
       <br>
       <h5>Would you like to add a transport for the island?</h5>
 
-      <div class="">
-        <div class="">
-          <% @transports.each do |transport| %>
-            <div class="card-product">
-            <img src=" <%= transport.photo%> ">
-            <div class="card-product-infos">
-              <div class="d-flex justify-content-between">
-                <h2> <%= transport.name %> </h2>
-                <h2>$ <%= transport.price %> </h2>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p><%= transport.description %></p>
-                <%= link_to "Select", island_transports_path(@island, @booking, t_id: transport.id),method: :post, class:"btn btn-primary"  %>
-              </div>
-            </div>
+
+      <% @transports.each do |transport| %>
+        <div class="card-product">
+        <img src=" <%= transport.photo%> ">
+        <div class="card-product-infos">
+          <div class="d-flex justify-content-between">
+            <h2> <%= transport.name %> </h2>
+            <h2>$ <%= transport.price %> </h2>
           </div>
-          <% end %>
+          <div class="d-flex justify-content-between">
+            <p><%= transport.description %></p>
+            <%= link_to "Select", island_transports_path(@island, @booking, t_id: transport.id),method: :post, class:"btn btn-primary"  %>
+          </div>
         </div>
       </div>
+      <% end %>
+
       <br>
 
       <%= link_to "No Thanks", island_transports_path(@island, @booking, t_id: nil),method: :post, class: "btn btn-secondary" %>
