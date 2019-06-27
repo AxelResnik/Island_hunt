@@ -46,12 +46,47 @@
   </div>
 </div>
 
-<div class="container my-3">
-  <%= link_to islands_path, class: "btn btn-outline-secondary" do %>
+
+<div class="container">
+
+  <% if current_user.islands %>
+  <div class="container" style="text-align: center; margin-top: 15px; margin-bottom: 30px;">
+    <h2>Here are your islands </h2>
+  </div>
+  <% current_user.islands.each do |island| %>
+  <div class="card-product">
+    <img src=" <%= island.photo%> ">
+    <div class="card-product-infos">
+      <div class="d-flex justify-content-between">
+        <h2> <%= island.name %> </h2>
+        <h5 style= "color:black">$ <%= island.price %> /night </h5>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p><%= island.activities.truncate(100) %></p>
+        <%= link_to "Edit", edit_island_path(island), class:"btn btn-primary"  %>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+  <div class="d-flex justify-content-between">
+
+  <%= link_to "Add another island", new_island_path, class: "btn-outline-primary btn-lg"  %>
+  <% else %>
+  <%= link_to "Create your island", new_island_path, class: "btn-outline-primary btn-lg"  %>
+  <% end %>
+  <%= link_to islands_path, class: "btn-outline-primary btn-lg" do %>
   Back to all islands
   <% end %>
+  </div>
 </div>
-</div>
+
+
+
+
+
+
+<% raise %>
 
 <div class="d-flex justify-content-center">
   <p> Remember... dead men tell no tales </p>
