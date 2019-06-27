@@ -13,7 +13,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
       <li class="nav-item active">
-       <span class="navbar-text mr-2"> <%= current_user.username %> </span> <br>
+       <span class="navbar-text mr-2"> <div class="username-color"> <%= current_user.username %> </div> </span> <br>
      </li>
      <li class="nav-item dropdown">
       <% if current_user.photo.url %>
