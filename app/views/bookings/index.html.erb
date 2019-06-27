@@ -7,7 +7,7 @@
     <% if !@bookings.empty? %>
     <% @bookings.each do |booking|%>
     <div class="card-trip col-12 col-sm-6 col-md-4 col-lg-4" id="dash-card">
-      <img src=" <%= booking.island.photo %>" style="margin-top: 15px;">
+      <img src=" <%= booking.island.photo %>" style="margin-top: 10px;">
       <div>
         <div>
           <h6 class="mt-2 text-center">Your reservation for <br> <%= booking.island.name %></h6>
@@ -33,8 +33,8 @@
           </div>
           <br>
           <div class="mb-3 d-flex justify-content-around">
-            <%= link_to "Cancel it", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
-            <%= link_to "details", booking_path(booking), class: 'btn btn-secondary'%>
+            <%= link_to "Cancel it", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-outline-danger' %>
+            <%= link_to "details", booking_path(booking), class: 'btn btn-outline-secondary'%>
           </div>
         </div>
       </div>
