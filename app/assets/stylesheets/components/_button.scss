@@ -5,7 +5,7 @@
   border-style: solid;
   border-color: $gold;
   padding: 10px;
-  background-color: $black;
+  background-color: none;
   border-width: 0.5px;
   border-radius: 3px;
   vertical-align: middle;
@@ -32,8 +32,8 @@
   text-align: center;
   &:hover {
     text-decoration: none;
-    background-color: $black;
-    color: $gold;
-    border-color: $gold;
+    background-color: $gold;
+    color: $black;
+    border-color: $black;
   }
 }

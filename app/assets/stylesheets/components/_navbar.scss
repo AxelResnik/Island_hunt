@@ -38,3 +38,10 @@
   background-color: $gold;
   color: $black;
 }
+
+.dropdown {
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
