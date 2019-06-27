@@ -97,3 +97,18 @@
   width: 100%;
 }
 
+.card-name-price {
+  display: flex;
+}
+
+.card-price-size {
+  flex-grow: 1;
+  text-align: right;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.container-buttons {
+  width: 20vw;
+  height: 15vh;
+}

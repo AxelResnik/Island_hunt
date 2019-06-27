@@ -4,6 +4,7 @@
   background-position: center;
   padding: 130px 0;
   height: 78vh;
+  position: relative;
 }
 
 .banner-show h1 {
@@ -27,7 +28,7 @@
   border-width: 1px;
   padding: 8px;
   border-radius: 5px;
-  position: relative;
+  margin-bottom: 4px;
 }
 
 #btn-booking-card{
@@ -39,4 +40,12 @@
 
 #map{
   padding-top: 30px;
+}
+
+.index-position {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  height: 20vh;
+  width: 25vw;
 }
