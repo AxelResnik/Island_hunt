@@ -47,7 +47,7 @@ jack.save!
 
 puts "Finished generating users"
 
-puts "Generating 5 islands"
+puts "Generating 8 islands"
 
 difficulty_level = %w[Easy Medium Hard]
 
@@ -78,7 +78,7 @@ island = Island.new(name: "Alice's Wonderland",
                     price: 2000,
                     difficulty: difficulty_level.sample,
                     remote_photo_url: "https://cdn.pixabay.com/photo/2016/06/24/12/40/chile-1477188_960_720.jpg",
-                    user: jack)
+                    user: cook)
 island.save!
 
 island = Island.new(name: "Mysterious Island",
@@ -99,6 +99,36 @@ island = Island.new(name: "Snow Flake",
                     difficulty: difficulty_level.sample,
                     remote_photo_url: "https://cdn.pixabay.com/photo/2018/03/22/00/05/water-3248815_960_720.jpg",
                     user: cook)
+island.save!
+
+island = Island.new(name: "Fire Island",
+                    location: "Moorea Island",
+                    activities: "If you enjoy hot weather and you are ready to play with fire.. then this island is for you!.",
+                    size: "20",
+                    price: 5382,
+                    difficulty: difficulty_level.sample,
+                    remote_photo_url: "https://wallpaperstock.net/wallpapers/thumbs1/40822.jpg",
+                    user: ching)
+island.save!
+
+island = Island.new(name: "Mauricio Island",
+                    location: "Mauricio",
+                    activities: "Don't be fooled by the name.. Mauricio will make your hunt diffucult.",
+                    size: "20",
+                    price: 3894,
+                    difficulty: difficulty_level.sample,
+                    remote_photo_url: "https://cdn.shopify.com/s/files/1/1858/2313/files/ISLAND-min.jpg?v=1518713762",
+                    user: jack)
+island.save!
+
+island = Island.new(name: "Vanuavatu",
+                    location: "Vanuavatu",
+                    activities: "Here you will find a series of diffucult challenges where you will need to use logic and outside of the box thinking.",
+                    size: "5",
+                    price: 6723,
+                    difficulty: difficulty_level.sample,
+                    remote_photo_url: "https://droningearth.files.wordpress.com/2011/02/black.jpg",
+                    user: jack)
 island.save!
 
 puts "Finished generating islands"
@@ -127,7 +157,7 @@ Transport.create!(category: 'Boat',
 Transport.create!(category: 'Submarine',
                   description: 'Yellow, Yellow, Submarine',
                   price: rand(1000..5000),
-                  remote_photo_url: 'http://1.bp.blogspot.com/-HBXUdm8ty3M/UHtzV2kS2pI/AAAAAAAAECg/GuQ20iYB79c/s1600/Captura+de+pantalla+2012-10-14+a+las+21.21.48.png',
+                  remote_photo_url: 'http://www.coralworld.com/yellow-sub/04.jpg',
                   name: 'Lucy')
 
 # Transport.create!(category: ,
