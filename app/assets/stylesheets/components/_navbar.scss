@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: black;
+  background-color: $black;
   h3 {
     color: $gold;
   }
@@ -21,19 +21,19 @@
 
 .dropdown-menu {
   background-color: $gold;
-  color: black;
+  color: $black;
   border-radius: 5px;
 }
 
 .dropdown-item {
   &:hover {
     text-decoration: none;
-    background-color: black;
+    background-color: $black;
     color: $gold;
   }
 }
 
 .nav-link {
   background-color: $gold;
-  color: black;
+  color: $black;
 }

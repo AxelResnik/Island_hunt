@@ -1,5 +1,5 @@
 .footer {
-  background: black;
+  background: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@
   }
 }
 .footer-links a {
-  color: black;
+  color: $black;
   opacity: 0.5;
   text-decoration: none;
   font-size: 24px;
@@ -27,18 +27,12 @@
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-futbol {
-  // color: black;
-  color: $gold;
-}
 
 .footer .fa-anchor {
-  // color: #2d72e2;
   color: $gold;
 }
 
 .footer .fa-beer {
-  // color: #f1a507;
   color: $gold;
 }
 
