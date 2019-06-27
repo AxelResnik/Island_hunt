@@ -6,8 +6,8 @@
   <div class="row">
     <% if !@bookings.empty? %>
     <% @bookings.each do |booking|%>
-    <div class="card-trip col-12 col-sm-6 col-md-4">
-      <img src=" <%= booking.island.photo %> " style="margin-top: 15px;">
+    <div class="card-trip col-12 col-sm-6 col-md-4 col-lg-4" id="dash-card">
+      <img src=" <%= booking.island.photo %>" style="margin-top: 15px;">
       <div>
         <div>
           <h6 class="mt-2 text-center">Your reservation for <br> <%= booking.island.name %></h6>
