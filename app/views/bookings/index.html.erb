@@ -71,22 +71,14 @@
   <% end %>
   <div class="d-flex justify-content-between">
 
-  <%= link_to "Add another island", new_island_path, class: "btn-outline-primary btn-lg"  %>
+  <%= link_to "Add another island", new_island_path, class: "btn btn-outline-primary btn-lg"  %>
   <% else %>
-  <%= link_to "Create your island", new_island_path, class: "btn-outline-primary btn-lg"  %>
+  <%= link_to "Create your island", new_island_path, class: "btn btn-outline-primary btn-lg"  %>
   <% end %>
-  <%= link_to islands_path, class: "btn-outline-primary btn-lg" do %>
-  Back to all islands
-  <% end %>
+  <%= link_to "Back to all islands", islands_path, class: "btn btn-outline-primary btn-lg"%>
   </div>
 </div>
 
-
-
-
-
-
-<% raise %>
 
 <div class="d-flex justify-content-center">
   <p> Remember... dead men tell no tales </p>
