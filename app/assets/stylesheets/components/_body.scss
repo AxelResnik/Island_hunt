@@ -1,11 +1,10 @@
 body {
-  // background-color: #F8F8F8;
-  background-color: black;
+  background-color: $black;
   color: $gold;
 }
 
 .home-page {
-  background-color: black;
+  background-color: $black;
   color: $gold;
   h5 {
     font-size: 30px;
